@@ -1,15 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body {
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmr7hPa3rNM5ZpBtCEX_VRtWAlWoXCPQSg9w&s');
 	background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
     background-attachment: fixed; /*la imagen ya no se mueve*/
-    margin: 0;
-    padding: 0;
 }
-header {
-    margin: 0;
-    padding: 0;
+header{
+    width: 100%;/*el header ocupa el 100% del ancho*/
+    
 }
 #titulo {
     text-align: center;
@@ -17,11 +19,11 @@ header {
     text-decoration-style: dashed;
     text-shadow: 4px 2px 2px gray;
     font-family: cursive;
-    width: 100%;
+    width: 100%; /*el encabezado ocupara el 100% del ancho*/
     padding: 20px;
-
+    font-size: 2em; /*el encabezado ahora tiene un tamaño base en rem*/
 }
-h1 {
+h1{
     margin: 0;
     padding: 0;
 }
@@ -30,12 +32,13 @@ h1 {
     text-align: center;
     text-shadow: 4px 4px 4px blue;
     padding-top: 40px;
+    font-size: 1.2em; /*El subtitulo ahora tiene un tamaño base en rem*/
 }
 #granito {
     color: aqua;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 150px;
+    height: 10em; /*la altura del granito ahora está en rem*/
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -47,7 +50,7 @@ h1 {
     text-decoration-color: blue;
     padding: 2em 1em 0.5em 3em;
     animation: spin 1s linear 0.5s infinite;
-
+    font-size: 1.1em;/*la fuente ahora está en rem*/
 }
 #conoce:hover {
     color: aquamarine;
@@ -64,7 +67,7 @@ h1 {
     color: white;
     background-color: darkblue;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1.1em; /*el boton ahora tiene un tamaño en rem*/
     margin-top: 20px;
     align-self: center;
 }
@@ -99,7 +102,7 @@ h1 {
     font-family: Arial, sans-serif;
     color: white;
     -webkit-text-stroke: 1px whitesmoke;
-    font-size: 25px;
+    font-size: 1.5em; /*el tamaño de los nombres ahora está en rem*/
     cursor: pointer;
     transition: color 0.3 ease, transform 0.3 ease;
      margin-right: 10px;
@@ -109,14 +112,14 @@ h1 {
     animation: animacion 0.5s ease-in-out;
 }
 .textoHide {
-    max-width: 60%;
+    max-width: 90%; /*se limita el ancho maximo del texto a un 90%*/
     background-color: rgba(0, 0, 0, 0.7);
     margin-top: 10px;
     padding: 20px;
     border-radius: 10px;
     font-family: Arial, sans-serif;
     color: #fff;
-    font-size: 20px;
+    font-size: 1.2em;/*la fuente ahora está en rem*/
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
     display: none;
     text-align: center;
@@ -144,7 +147,7 @@ h1 {
     display: block;
 }
 .gif-container {
-    width: 100px; /*ajusta el ancho del gif*/
+    max-width: 100px; /*ajusta el ancho del gif*/
     height: auto; /*mantiene la proporcion del gif*/
     margin-top: 10px; /*separacion del texto*/
     margin-left: auto; /*centra el gif*/
@@ -157,31 +160,55 @@ h1 {
     padding:20px;
     text-align: center;
     color: white;
-    position:relative;
     width: 100%;
+    position: relative; /*Cambiar de absolute a relative*/
 }
 .abajo {
-    display:flex;
+    display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
 }
 .ajo {
-    width: 50px;
-    height: 50px;
+    max-width: 50px; /*la imagen ahora tiene un tamaño máximo en rem*/
+    height: auto;
     margin: 0 10px;
 }
 .final {
-    margin: 0 20px;
-    font-size: 20px;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    margin: 0 10px;
+    font-size: 1.3em; /*tamaño de la fuente ahora en rem*/
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /*agregando contorno negro*/
 }
 @keyframes animacion2 {
     0% {transform: translateX(0);}
-    50% {transform: translateX(1000px);}
+    50% {transform: translateX(80px);}
     100% {transform: translateX(0);}
 }
-#goku:active {
-    animation: animacion2 7s ease-in-out;
-    transition: tranform 0.5 ease;
-  
+#goku:hover {
+    animation: animacion2 0.5s ease-in-out;
+}
+ /* Estilos para pantallas pequeñas (celulares) */
+ @media screen and (max-width: 600px) {
+  /* Aquí puedes agregar estilos específicos para celulares */
+       #titulo{
+         font-size: 1.8em; /*Reduce el tamaño del titulo para celulares*/
+         padding: 10px; /*Reduce el padding para celulares*/
+       }
+     .contenedor{
+          gap: 50px; /*Reduce el espacio entre imágenes en el contenedor*/
+      }
+   .nombres {
+     margin: 10px;/*Reduce el margen para celulares*/
+    }
+    .nombres p {
+      font-size: 1.2em; /*Reduce el tamaño de la fuente de los nombres*/
+    }
+    .footer{
+      padding: 10px;
+    }
+     .final{
+        font-size: 1em; /* Reduce tamaño del texto final en el footer para celulares */
+     }
+     .ajo{
+      max-width: 30px; /*Reduce tamaño de los gif en el footer para celulares*/
+     }
 }
