@@ -180,11 +180,12 @@ h1{
 }
 @keyframes animacion2 {
     0% {transform: translateX(0);}
-    50% {transform: translateX(400px);}
+    50% {transform: translateX(1000px);}
     100% {transform: translateX(0);}
 }
-#goku:hover {
+#goku:active {
     animation: animacion2 7s ease-in-out;
+	transition: transform 0.5s ease;
 }
  /* Estilos para pantallas pequeñas (celulares) */
  @media screen and (max-width: 600px) {
