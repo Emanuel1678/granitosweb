@@ -184,7 +184,7 @@ h1{
     100% {transform: translateX(0);}
 }
 #goku:hover {
-    animation: animacion2 0.5s ease-in-out;
+    animation: animacion2 7s ease-in-out;
 }
  /* Estilos para pantallas pequeñas (celulares) */
  @media screen and (max-width: 600px) {
