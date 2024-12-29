@@ -189,3 +189,14 @@ img {
   max-width: 100%;
   height: auto;
 }
+/* Estilos para pantallas pequeñas (celulares) */
+@media screen and (max-width: 600px) {
+  /* Aquí puedes agregar estilos específicos para celulares */
+   #titulo{
+       font-size: 2em;
+   }
+}
+/* Estilos para pantallas medianas (tabletas) */
+@media screen and (min-width: 601px) and (max-width: 1024px){
+  /* Aquí puedes agregar estilos específicos para tabletas */
+}
