@@ -1,0 +1,187 @@
+body {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmr7hPa3rNM5ZpBtCEX_VRtWAlWoXCPQSg9w&s');
+	background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed; /*la imagen ya no se mueve*/
+    margin: 0;
+    padding: 0;
+}
+header {
+    margin: 0;
+    padding: 0;
+}
+#titulo {
+    text-align: center;
+    background-color: yellow;
+    text-decoration-style: dashed;
+    text-shadow: 4px 2px 2px gray;
+    font-family: cursive;
+    width: 100%;
+    padding: 20px;
+
+}
+h1 {
+    margin: 0;
+    padding: 0;
+}
+#subtitulo {
+    color: white;
+    text-align: center;
+    text-shadow: 4px 4px 4px blue;
+    padding-top: 40px;
+}
+#granito {
+    color: aqua;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#conoce {
+    color: white;
+    text-align: center;
+    text-decoration-line: underline;
+    text-decoration-color: blue;
+    padding: 2em 1em 0.5em 3em;
+    animation: spin 1s linear 0.5s infinite;
+
+}
+#conoce:hover {
+    color: aquamarine;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    50% { transform: rotate(5deg);}
+    100% { transform: rotate(0deg);}
+
+}
+#boton {
+    border-radius: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: darkblue;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    align-self: center;
+}
+#boton:hover {
+    background-color: #367c39;
+
+}
+#miVideo {
+    display: none;
+}
+@keyframes animacion {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(20px);}
+    100% {transform: translateX(0);}
+}
+.contenedor { /*para acomodar las imagenes*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+}
+.nombres {
+    margin: 20px;
+    padding: 10px;
+    border 2px solid cyan;
+    background: transparent;
+    display: flex;
+    flex-direction: column; /* Los nombres en columna */
+    align-items: flex-start;
+}
+.nombres p {
+    font-family: Arial, sans-serif;
+    color: white;
+    -webkit-text-stroke: 1px whitesmoke;
+    font-size: 25px;
+    cursor: pointer;
+    transition: color 0.3 ease, transform 0.3 ease;
+     margin-right: 10px;
+}
+.nombres p:hover {
+    color: yellow;
+    animation: animacion 0.5s ease-in-out;
+}
+.textoHide {
+    max-width: 60%;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    font-size: 20px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    display: none;
+    text-align: center;
+    animation: fadeIn 0.5 ease-in-out;
+    flex-direction: column;
+    display: flex;
+
+}
+#textoCont {
+    display: none; /*Se oculta por completo el texto cont*/
+    justify-content: center;
+    align-items: center;
+    padding-left: 350px;
+    text-align: center;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.textoVisible{
+    display: block;
+}
+.gif-container {
+    width: 100px; /*ajusta el ancho del gif*/
+    height: auto; /*mantiene la proporcion del gif*/
+    margin-top: 10px; /*separacion del texto*/
+    margin-left: auto; /*centra el gif*/
+    margin-right: auto; /*centra el gif*/
+    display: flex;
+    flex-direction: column;
+}
+.footer {
+    background-color: yellow;
+    padding:20px;
+    text-align: center;
+    color: white;
+    position:relative;
+    width: 100%;
+}
+.abajo {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+.ajo {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+}
+.final {
+    margin: 0 20px;
+    font-size: 20px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+@keyframes animacion2 {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(1000px);}
+    100% {transform: translateX(0);}
+}
+#goku:active {
+    animation: animacion2 7s ease-in-out;
+    transition: tranform 0.5 ease;
+  
+}
