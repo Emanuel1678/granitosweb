@@ -185,3 +185,7 @@ h1 {
     transition: tranform 0.5 ease;
   
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
